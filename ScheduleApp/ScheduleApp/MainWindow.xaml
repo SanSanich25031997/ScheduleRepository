@@ -1,0 +1,19 @@
+﻿<Window x:Class="ScheduleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScheduleApp"
+        mc:Ignorable="d"
+        Title="ScheduleApp" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="dgSchedule" FontSize="16" FontWeight="Bold" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path = Name}" Header="Название дисциплины" Width="250"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Path = DayOfWeek}" Header="День недели" Width="180"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Path = StartTime}" Header="Начало" Width="180"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Path = EndTime}" Header="Завершение" Width="*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
